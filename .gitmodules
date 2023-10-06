@@ -1,0 +1,5 @@
+[submodule "openapi/express-open-api"]
+	path = openapi/express-open-api
+	url = https://github.com/default-writer/express-open-api.git
+[submodule "openapi/api-example"]
+	path = openapi/api-example

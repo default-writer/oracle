@@ -22,5 +22,12 @@
 	// "postCreateCommand": "docker --version",
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
-	"postCreateCommand": "bash -e ./scripts/docker.sh && bash -e ./scripts/init.sh"
+	"postCreateCommand": "bash -e ./scripts/docker.sh && bash -e ./scripts/init.sh",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"rogalmic.bash-debug"
+			]
+		}
+	}
 }
