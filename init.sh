@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
-git config --global --add safe.directory $(pwd)
+PWD=$(pwd)
+
+git config --global --add safe.directory "${PWD}"
 
 . ./install-nvm.sh
 . ./install-yarn.sh
-
