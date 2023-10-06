@@ -65,6 +65,7 @@ while (($#)); do
             help
             ;;
     esac
+    shift
 done
 
 if [[ "${source}" == "all" || "${todo}" == "--todo" ]]; then
