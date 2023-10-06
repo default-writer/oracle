@@ -39,21 +39,21 @@ while (($#)); do
             source="all"
             ;;
 
-        "--install") # installs
+        "--install") # installs packages
             install="--install"
             shift
             ;;
 
-        "--uninstall") # uninstalls
+        "--uninstall") # uninstalls packages
             uninstall="--uninstall"
             shift
             ;;
 
-        "--todo") # installs todo app
+        "--todo") # todo app
             todo="--todo"
             ;;
 
-        "--api") # installs open api example
+        "--api") # open api example
             api="--api"
             ;;
 
