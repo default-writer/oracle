@@ -33,4 +33,5 @@ yarn tsc
 
 ```bash
 yarn add express @types/express
+yarn add connect express-openapi-validator swagger-routes-express validator yamljs @types/validator @types/yamljs
 ```

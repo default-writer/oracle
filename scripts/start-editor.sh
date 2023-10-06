@@ -13,14 +13,24 @@ PWD=$(pwd)
 
 # run swagger-editor container with the yaml, if not running yet
 # opening specific file doesn't work with editor
-name='swagger-ui'
+name='swagger-editor'
 command -v docker >/dev/null 2>&1 || {
 	echo >&2 "'docker' is not install installed. Aborting."
 	exit 1
 }
 
 # trunk-ignore(shellcheck/SC2312)
-[[ "$(docker ps -f "name=${name}" --format '{{.Names}}')" == "${name}" ]] || 
-docker run --rm -d -p 8045:8080 --name "${name}" -e SWAGGER_JSON=/config/openapi.yaml -v "${LOCAL_WORKSPACE_FOLDER//\\/\/}/config:/config" swaggerapi/swagger-ui
+process=$(docker ps -f "name=${name}" --format '{{.Names}}')
+if [[ "${process[*]}" == *"${name}"* ]]; then
+	docker stop "${name}"
+fi
+
+docker run \
+    --rm -d \
+    -p 8044:8080 \
+    --name "${name}" \
+    -e SWAGGER_FILE=/config/openapi.yaml \
+    -v "${LOCAL_WORKSPACE_FOLDER//\\/\/}/config:/config" \
+    swaggerapi/swagger-editor
 
 wait_container_to_be_running "${name}" & sleep 2
