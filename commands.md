@@ -20,18 +20,6 @@ yarn init
 yarn add @types/node typescript
 yarn add -D ts-node
 yarn tsc --init --rootDir src --outDir ./bin --esModuleInterop --lib ES2019 --module commonjs --noImplicitAny true
-```
-
-```bash
-mkdir src
-echo "console.log('Hello World\!\!\!')" > src/app.ts
-```
-
-```bash
-yarn tsc
-```
-
-```bash
 yarn add express @types/express
 yarn add connect express-openapi-validator swagger-routes-express validator yamljs @types/validator @types/yamljs
 ```
