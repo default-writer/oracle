@@ -25,6 +25,3 @@ command -v docker >/dev/null 2>&1 || {
 
 wait_container_to_be_running "${name}" &
 sleep 2
-
-# open swagger-ui in browser
-open http://localhost:8044
