@@ -35,11 +35,11 @@ install="$1"
 case "${install}" in
 
     "--todo") # installs rexo as git submodule
-        submodule-install https://github.com/default-writer/express-open-api.git openapi/express-open-api
+        submodule-install https://github.com/default-writer/express-open-api.git ./openapi/express-open-api
         ;;
 
     "--api") # installs musl as git submodule
-        submodule-install https://github.com/default-writer/api-example.git openapi/api-example
+        submodule-install https://github.com/default-writer/api-example.git ./openapi/api-example
         ;;
 
     *)
