@@ -69,7 +69,12 @@ while (($#)); do
 done
 
 if [[ "${source}" == "all" || "${todo}" == "--todo" ]]; then
-    "${pwd}/bin/utils/install.sh" --todo
+    if [[ "${install}" == "--install" ]]; then
+        "${pwd}/bin/utils/install.sh" --todo
+    fi
+    if [[ "${uninstall}" == "--uninstall" ]]; then
+        "${pwd}/bin/utils/uninstall.sh" --todo
+    fi
 fi
 if [[ "${source}" == "all" || "${api}" == "--api" ]]; then
     "${pwd}/bin/utils/install.sh" --api
