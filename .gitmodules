@@ -3,3 +3,4 @@
 	url = https://github.com/default-writer/express-open-api.git
 [submodule "openapi/api-example"]
 	path = openapi/api-example
+	url = https://github.com/default-writer/api-example.git
