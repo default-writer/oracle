@@ -30,3 +30,7 @@ echo "console.log('Hello World\!\!\!')" > src/app.ts
 ```bash
 yarn tsc
 ```
+
+```bash
+yarn add express @types/express
+```
