@@ -59,10 +59,10 @@ case "${install}" in
 esac
 
 if [[ "${source}" == "all" || "${todo}" == "--todo" ]]; then
-    "${pwd}/bin/utils/install.sh" --submodule-todo
+    "${pwd}/bin/utils/install.sh" --todo
 fi
 if [[ "${source}" == "all" || "${api}" == "--api" ]]; then
-    "${pwd}/bin/utils/install.sh" --submodule-api
+    "${pwd}/bin/utils/install.sh" --api
 fi
 
 [[ $SHLVL -gt 2 ]] || echo OK
