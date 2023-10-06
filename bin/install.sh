@@ -76,7 +76,12 @@ if [[ "${source}" == "all" || "${todo}" == "--todo" ]]; then
     fi
 fi
 if [[ "${source}" == "all" || "${api}" == "--api" ]]; then
-    "${pwd}/bin/utils/install.sh" --api
+    if [[ "${install}" == "--install" ]]; then
+        "${pwd}/bin/utils/install.sh" --api
+    fi
+    if [[ "${uninstall}" == "--uninstall" ]]; then
+        "${pwd}/bin/utils/uninstall.sh" --api
+    fi
 fi
 
 [[ $SHLVL -gt 2 ]] || echo OK
