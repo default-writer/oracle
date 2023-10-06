@@ -22,7 +22,7 @@ tags:
 paths:
   /hello:
     get:
-      description: Returns 'Hello <name>/stranger!!!' to the caller
+      description: Returns 'Hello, <name>!' to the caller
       tags:
         - greeting
       operationId: hello
