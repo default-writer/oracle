@@ -30,7 +30,7 @@ docker run \
     -p 8044:8080 \
     --name "${name}" \
     -e SWAGGER_FILE=/config/openapi.yaml \
-    -v "${LOCAL_WORKSPACE_FOLDER//\\/\/}/config:/config" \
+    -v "${LOCAL_WORKSPACE_FOLDER//\\/\/}/config:/config:rw" \
     swaggerapi/swagger-editor
 
 wait_container_to_be_running "${name}" & sleep 2
