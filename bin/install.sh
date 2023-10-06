@@ -32,21 +32,20 @@ fi
 ## Usage: ${script} <option> [optional]
 ## ${commands}
 
+source="all"
+
 while (($#)); do
     case "$1" in
 
         "")
-            source="all"
             ;;
 
         "--install") # installs packages
             install="--install"
-            shift
             ;;
 
         "--uninstall") # uninstalls packages
             uninstall="--uninstall"
-            shift
             ;;
 
         "--todo") # todo app

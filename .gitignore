@@ -133,5 +133,4 @@ dist
 bun.lockb
 yarn.lock
 
-express-open-api
-api-example
+openapi/*
