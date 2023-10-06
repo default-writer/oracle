@@ -1,0 +1,16 @@
+{
+  "name": "api-example",
+  "version": "1.0.0",
+  "description": "Backend API Example",
+  "main": "src/app.ts",
+  "repository": "git@github.com:default-writer/oraclea.git",
+  "author": "default-writer",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^20.8.2",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1"
+  }
+}
