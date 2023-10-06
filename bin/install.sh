@@ -26,37 +26,46 @@ if [ "${uid}" -eq 0 ]; then
     exit
 fi
 
-install="$1"
-
 . "${pwd}/bin/scripts/load.sh"
 
 ## Installs dependecies and hooks
 ## Usage: ${script} <option> [optional]
 ## ${commands}
 
-case "${install}" in
+while (($#)); do
+    case "$1" in
 
-    "")
-        source="all"
-        ;;
+        "")
+            source="all"
+            ;;
 
-    "--todo") # installs todo app
-        todo="--submodule-todo"
-        ;;
+        "--install") # installs
+            install="--install"
+            shift
+            ;;
 
-    "--api") # installs open api example
-        api="--submodule-api"
-        ;;
+        "--uninstall") # uninstalls
+            uninstall="--uninstall"
+            shift
+            ;;
 
-    "--help") # shows command description
-        help
-        ;;
+        "--todo") # installs todo app
+            todo="--todo"
+            ;;
 
-    *)
-        help
-        ;;
+        "--api") # installs open api example
+            api="--api"
+            ;;
 
-esac
+        "--help") # shows command description
+            help
+            ;;
+
+        *)
+            help
+            ;;
+    esac
+done
 
 if [[ "${source}" == "all" || "${todo}" == "--todo" ]]; then
     "${pwd}/bin/utils/install.sh" --todo
